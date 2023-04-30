@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&family=Outfit:wght@400;700&family=Red+Hat+Display:wght@500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Inter:wght@400;700&family=Lexend+Deca&family=Outfit:wght@400;700&family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+:root {
+  --Bright_orange: hsl(31, 77%, 52%);
+  --Dark_cyan: hsl(184, 100%, 22%);
+  --Very_dark_cyan: hsl(179, 100%, 13%);
+
+  --Transparent_white_paragraphs: hsla(0, 0%, 100%, 0.75);
+  --Very_light_gray_background_headings_buttons: hsl(0, 0%, 95%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+body {
+  font-size: 1.3rem;
+}
+
+.container {
+  margin: 10vh auto;
+  border-radius: 1rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  max-width: 33rem;
+}
+@media (min-width:40em) {
+    .container {
+        flex-direction: row;
+        max-width: 92rem;
+    }
+    .btn {
+        margin-top: 9rem;
+    }
+}
+.container h1 {
+  font-family: "Big Shoulders Display", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: white;
+  font-size: 4rem;
+}
+.container p {
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  color: var(--Transparent_white_paragraphs);
+  line-height: 2.5rem;
+  max-width: 25ch;
+}
+
+.component {
+    flex-basis: 100%;
+}
+.content {
+  padding: 4.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-left: 2rem;
+}
+.content img {
+  width: 6rem;
+}
+
+.component.first {
+  background: var(--Bright_orange);
+}
+.component.second {
+  background: var(--Dark_cyan);
+}
+.component.third {
+  background: var(--Very_dark_cyan);
+}
+
+.btn {
+  border-color: transparent;
+  border-style: solid;
+  height: 4.5rem;
+  width: 14.5rem;
+  border-radius: 5000px;
+  font-weight: 400;
+  font-size: 1.5rem;
+}
+
+
+.btn:hover{
+    border-color: white;
+}
+
+.btn.btn-first {
+    color: var(--Bright_orange);
+}
+.btn.btn-first:hover {
+    background: var(--Bright_orange);
+    color: white;
+}
+
+.btn.btn.btn-second {
+    color: var(--Dark_cyan);
+}
+.btn.btn.btn-second:hover {
+    background: var(--Dark_cyan);
+    color: white;
+}
+
+.btn.btn.btn-third {
+    color: var(--Very_dark_cyan);
+}
+.btn.btn.btn-third:hover {
+    background: var(--Very_dark_cyan);
+    color: white;
+}
+

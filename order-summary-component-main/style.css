@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+:root {
+  --Pale_blue: hsl(225, 100%, 94%);
+  --Bright_blue: hsl(245, 75%, 52%);
+  --Very_pale_blue: hsl(225, 100%, 98%);
+  --Desaturated_blue: hsl(224, 23%, 55%);
+  --Dark_blue: hsl(223, 47%, 23%);
+}
+* {
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 16px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  background-image: url("./images/pattern-background-desktop.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: var(--Pale_blue);
+}
+
+.card {
+  margin-top: 20vh;
+  max-width: 450px;
+  max-height: 700px;
+  border-radius: 25px;
+  overflow: hidden;
+  background: white;
+}
+
+.hero-section {
+  max-height: 220px;
+}
+img {
+  max-width: 100%;
+}
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+}
+.content p {
+  text-align: center;
+  color: var(--Desaturated_blue);
+}
+.payment {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--Very_pale_blue);
+  width: 90%;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+}
+.payment .price {
+  display: flex;
+  align-items: center;
+  line-height: 2px;
+}
+
+.payment .price div {
+  margin-left: 20px;
+}
+
+.btn {
+  border: none;
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-weight: bold;
+  min-height: 50px;
+  cursor: pointer;
+}
+
+.btn.change {
+  text-decoration: underline;
+  background-color: transparent;
+  color: var(--Bright_blue);
+}
+.btn.change:hover {
+    color: var(--Dark_blue);
+}
+.submit {
+  width: 100%;
+  background: var(--Bright_blue);
+  color: white;
+  margin-bottom: 10px;
+}
+.submit:hover {
+  opacity: 0.8;
+}
+.cancel {
+  width: 100%;
+  background: white;
+  color: var(--Desaturated_blue);
+}
+
+.cancel:hover {
+    color: var(--Dark_blue);
+}

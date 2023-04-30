@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+:root {
+  --Very_dark_blue_main_BG: hsl(217, 54%, 11%);
+  --Very_dark_blue_card_BG: hsl(216, 50%, 16%);
+  --Very_dark_blue_line: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+  --Soft_blue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+}
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+    display: flex;
+    justify-content: center;
+    font-family: 'Outfit',sans-serif;
+    background: var(--Very_dark_blue_main_BG);
+}
+
+ul > li
+{
+    list-style-type: none;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    background: var(--Very_dark_blue_card_BG);
+    margin-top: 5%;
+    border-radius: 10px;
+    padding: 22px;
+    max-height: 600px;
+    max-width: 350px;
+}
+.card img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+.header {
+    margin-top: 25px;
+    color: var(--White);
+}
+.description {
+    margin-top: 20px;
+    font-size: 18px;
+    color: var(--Soft_blue);
+}
+
+.sections {
+    margin-top: 20px;
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.sections .price{
+    color: var(--Cyan);
+}
+
+.sections .days{
+    color: var(--Soft_blue);
+}
+
+hr {
+    margin-top: 20px;
+    background: var(--Very_dark_blue_line);
+    width: 100%;
+    border: 1px solid var(--Very_dark_blue_line);
+    border-radius: 30px;
+}
+.footer {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+}
+.footer .avatar{
+    background: var(--White);
+    width: 33px;
+    height: 33px;
+    border-radius: 50%;
+    padding: 1px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
