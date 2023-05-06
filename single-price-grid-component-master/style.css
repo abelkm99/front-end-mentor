@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap");
+:root {
+  font-family: "Karla", sans-serif;
+  font-size: 62.5%;
+  --Cyan: hsl(179, 62%, 43%);
+  --Bright_Yellow: hsl(71, 73%, 54%);
+  --Light_Gray: hsl(204, 43%, 93%);
+  --Grayish_Blue: hsl(218, 22%, 67%);
+  --light-cyan: rgb(107, 187, 188);
+}
+html {
+  font-size: 1.6rem;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  margin-top: 1em;
+}
+p {
+    font-size: 1.2rem;
+}
+h1 {
+  font-weight: 700;
+}
+h2 {
+  font-weight: 400;
+}
+body {
+  background-color: var(--Light_Gray);
+  color: white;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+main {
+  max-width: 31rem;
+  border-radius: 0.6rem;
+  overflow: hidden;
+  -webkit-border-radius: 0.6rem;
+  -moz-border-radius: 0.6rem;
+  -ms-border-radius: 0.6rem;
+  -o-border-radius: 0.6rem;
+}
+
+.content {
+  margin: 2.5rem 2rem;
+  /* border: blue solid 2px; */
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+.first {
+  display: flex;
+  background: white;
+}
+.first .content {
+  margin-top: 0rem;
+}
+.first h1 {
+  color: var(--Cyan);
+}
+.first h2 {
+  color: var(--Bright_Yellow);
+}
+.first p {
+  max-width: 33ch;
+  color: var(--Grayish_Blue);
+  line-height: 2rem;
+}
+.second {
+  background: var(--Cyan);
+  color: var(--Light_Gray);
+}
+.price {
+  font-weight: lighter;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+}
+.price span {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+.price p {
+  margin-top: 1.5rem;
+}
+.btn {
+  margin-top: 2.5rem;
+  background: var(--Bright_Yellow);
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 1em 2em;
+  display: block;
+  width: inherit;
+  text-align: center;
+  border-radius: 3px;
+}
+.btn:hover {
+  cursor: pointer;
+  background: var(--Light_Gray);
+  color: var(--Bright_Yellow);
+}
+
+.third {
+  background-color: var(--light-cyan);
+  color: var(--Light_Gray);
+}
+.third p {
+  max-width: 22ch;
+  font-weight: lighter;
+  line-height: 2rem;
+}
+
+@media (min-width:40em) {
+    main {
+        max-width: 63rem;
+    }
+    .section {
+        flex-direction: row;
+    }
+    .section > * {
+        flex: 1;
+    }
+    .first p {
+        max-width: fit-content;
+    }
+}
