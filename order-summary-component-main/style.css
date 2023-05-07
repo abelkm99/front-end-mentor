@@ -15,23 +15,24 @@
 body {
   display: flex;
   justify-content: center;
+  align-items: center;
   background-image: url("./images/pattern-background-desktop.svg");
   background-repeat: no-repeat;
   background-size: contain;
   background-color: var(--Pale_blue);
+  min-height: 100vh;
 }
 
 .card {
-  margin-top: 20vh;
+  display: inline;
   max-width: 450px;
-  max-height: 700px;
   border-radius: 25px;
   overflow: hidden;
   background: white;
 }
 
 .hero-section {
-  max-height: 220px;
+  min-height: 220px;
 }
 img {
   max-width: 100%;
@@ -81,7 +82,7 @@ img {
   color: var(--Bright_blue);
 }
 .btn.change:hover {
-    color: var(--Dark_blue);
+  color: var(--Dark_blue);
 }
 .submit {
   width: 100%;
@@ -99,5 +100,13 @@ img {
 }
 
 .cancel:hover {
-    color: var(--Dark_blue);
+  color: var(--Dark_blue);
+}
+@media (max-width: 40em) {
+  .payment {
+    flex-direction: column;
+  }
+  .price {
+    flex-direction: column;
+  }
 }
