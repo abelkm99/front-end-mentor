@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Frontend Mentor | Base Apparel coming soon page</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <img class="logo" src="./images/logo.svg" alt="" />
+        <div class="description">
+          <img class="img"src="./images/hero-mobile.jpg" alt="" />
+          <div class="content">
+            <h1>
+              <span class="sp-first"> We're</span>
+              <span class="sp-second">coming soon</span>
+            </h1>
+            <p>
+              Hello fellow shoppers! We're currently building our new fashion
+              store. Add your email below to stay up-to-date with announcements
+              and our launch deals. Email Address
+            </p>
+            <div class="input_field">
+              <input type="email" placeholder="Email Address" />
+              <img id="error-img" src="./images/icon-error.svg" alt="" />
+              <img id="btn-img" src="./images/icon-arrow.svg" alt="" />
+              <span> please provide a valid email! </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
+<script>
+  // Get the input field, error message element, and error image element
+  const emailInput = document.querySelector('input[type="email"]');
+  const errorSpan = document.querySelector(".input_field span");
+  const errorImg = document.getElementById("error-img");
+  errorSpan.style.display = "none";
+  errorImg.style.display = "none";
+  // Add event listener to input field for validation on user input
+  emailInput.addEventListener("input", () => {
+    if (emailInput.validity.valid) {
+      // if the user input is valid, hide the error message and image
+      errorSpan.style.display = "none";
+      errorImg.style.display = "none";
+      document.getElementById("btn-img").style.opacity = 1;
+    } else {
+      // if the user input is invalid, display the error message and image
+      errorSpan.style.display = "block";
+      errorImg.style.display = "inline-block";
+      document.getElementById("btn-img").style.opacity = 0.5;
+    }
+  });
+</script>

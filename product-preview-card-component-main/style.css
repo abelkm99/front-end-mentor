@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap');
+:root {
+--Dark_cyan: hsl(158, 36%, 37%);
+--Very_Dark_cyan: hsl(157, 46%, 16%);
+--Cream: hsl(30, 38%, 92%);
+--Very_dark_blue: hsl(212, 21%, 14%);
+--Dark_grayish_blue: hsl(228, 12%, 48%);
+--White: hsl(0, 0%, 100%);
+font-size: 62.5%;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-size: 1.6rem;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--Cream);
+    min-height: 100vh;
+}
+
+img {
+    max-inline-size: 100%;
+    block-size: auto;
+}
+
+
+.container {
+    max-width: 34rem;
+    border-radius: 1.2rem;
+    overflow: hidden;
+    background: var(--White);
+    display: flex;
+    flex-direction: column;
+}
+
+.image-section {
+    height: 24rem;
+    background-image: url(./images/image-product-mobile.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+.content p, h6 {
+    color: var(--Dark_grayish_blue);
+}
+.content h6 {
+    text-transform: uppercase;
+    letter-spacing: 0.5em;
+    font-weight: lighter;
+}
+.content h1 {
+    font-family: 'Fraunces';
+    font-weight: 700;
+    color: var(--Very_dark_blue);
+}
+
+.price {
+    display: flex;
+}
+.price div:first-child {
+  font-size: 3.2rem;
+  font-family: 'Fraunces';
+  color: var(--Dark_cyan);
+}
+.price div:last-child {
+    align-self: center;
+    padding-left: 2rem;
+    text-decoration: line-through;
+    color: var(--Dark_grayish_blue);
+}
+
+.content a {
+    text-align: center;
+    border: none;
+    background: var(--Dark_cyan);
+    padding: 1em;
+    border-radius: 1rem;
+    color: var(--White);
+    margin-top: 1em;
+    margin-left: 1em;
+    cursor: pointer;
+}
+
+.content a:hover {
+    background: var(--Very_Dark_cyan);
+}
+
+@media (min-width:40em) {
+    
+    .container {
+        min-width: 60rem;
+        flex-direction: row;
+    }
+    .image-section {
+        height: auto;
+        background-image: url("./images/image-product-desktop.jpg");
+    }
+    .container > div {
+        flex: 1;
+    }
+}
