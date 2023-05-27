@@ -154,7 +154,7 @@ body {
     padding: 0;
     max-width: 15ch;
     font-weight: 700;
-    font-size: 4rem;
+    font-size: 6rem;
   }
   .description p {
     max-width: 45ch;
@@ -167,9 +167,10 @@ body {
   }
   .rating {
     max-width: 50rem;
-    min-width: var(--max-width);
+    width: 50rem;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+    padding: 2rem 0rem;
   }
 }
