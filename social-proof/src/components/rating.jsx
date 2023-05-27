@@ -14,10 +14,10 @@ export default function Rating({ data, num_stars, offset = 0 }) {
       if (width < 775) {
         setOffset(0);
       } else if (width < 1000) {
-        setOffset(offset - width / 30);
+        setOffset(offset - width / 60);
       } 
       else if (width < 1200) {
-        setOffset(offset - width / 50);
+        setOffset(offset - width / 120);
       }
       else {
         setOffset(offset)
